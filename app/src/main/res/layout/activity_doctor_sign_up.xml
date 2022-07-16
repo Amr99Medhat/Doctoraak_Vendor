@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="clickHandler"
+            type="com.doctoraak.doctoraakdoctor.ui.signUpDoctor.DoctorSignUpActivity.DoctorSignUpClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.doctoraak.doctoraakdoctor.ui.signUpDoctor.DoctorSignUpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/sign_up_scene"
+        android:background="@color/main_background">
+
+        <ImageView
+            android:id="@+id/iv_image_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_expanded_header"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_toolbar_full"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:contentDescription="@string/back"
+            android:onClick="@{()->clickHandler.onBack()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_expanded_header"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_sub_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_sub_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/create_doctor_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_text" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dimens_profile_expaneded"
+            android:layout_height="@dimen/dimens_profile_expaneded"
+            android:onClick="@{()->clickHandler.onProfileImage()}"
+            android:src="@drawable/ic_profile_def"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image_back"/>
+
+        <ImageView
+            android:id="@+id/iv_profile_icon"
+            android:layout_width="@dimen/dimens_profile_icon_expanded"
+            android:layout_height="@dimen/dimens_profile_icon_expanded"
+            android:padding="4dp"
+            android:tint="@color/white"
+            android:background="@drawable/notification_count_background"
+            app:srcCompat="@drawable/ic_menu_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_bottom_image_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="iv_image_back,iv_profile"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_bottom_image_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_group_personal_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_name"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:hint="@string/full_name"
+                        app:layout_constraintBottom_toTopOf="@+id/etl_phone"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:text="@={viewModel.doctor.name}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_phone"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/phone_number"
+                        app:layout_constraintBottom_toTopOf="@+id/etl_phone2"
+                        app:layout_constraintTop_toBottomOf="@+id/etl_name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:text="@={viewModel.doctor.phone}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_phone2"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/phone_number_2"
+                        app:helperText="@string/optional"
+                        app:layout_constraintBottom_toTopOf="@+id/etl_email"
+                        app:layout_constraintTop_toBottomOf="@+id/etl_phone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_phone2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:text="@={viewModel.doctor.phone2}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_email"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/email"
+                        app:helperText="@string/optional"
+                        app:layout_constraintBottom_toTopOf="@+id/etl_password"
+                        app:layout_constraintTop_toBottomOf="@+id/etl_phone2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:text="@={viewModel.doctor.email}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_password"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/password"
+                        app:errorIconDrawable="@null"
+                        app:layout_constraintBottom_toTopOf="@+id/etl_confirm_password"
+                        app:layout_constraintTop_toBottomOf="@+id/etl_email"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:text="@={viewModel.doctor.password}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_confirm_password"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        app:errorIconDrawable="@null"
+                        android:hint="@string/confirm_password"
+                        app:layout_constraintBottom_toTopOf="@+id/gender_group"
+                        app:layout_constraintTop_toBottomOf="@+id/etl_password"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_confirm_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <include
+                        android:id="@+id/gender_group"
+                        layout="@layout/gender_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        app:layout_constraintEnd_toEndOf="@+id/etl_confirm_password"
+                        app:layout_constraintStart_toStartOf="@+id/etl_confirm_password"
+                        app:layout_constraintTop_toBottomOf="@+id/etl_confirm_password" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_group_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.tiper.MaterialSpinner
+                        android:id="@+id/spl_specialization"
+                        style="@style/SpinnerNormal"
+                        android:hint="@string/specialization"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:spinnerMode="bottomsheet" />
+
+                    <com.tiper.MaterialSpinner
+                        android:id="@+id/spl_degree"
+                        style="@style/SpinnerNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/degree"
+                        app:layout_constraintTop_toBottomOf="@id/spl_specialization"
+                        app:spinnerMode="dropdown" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_description"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/description"
+                        app:helperText="@string/optional"
+                        app:layout_constraintTop_toBottomOf="@id/etl_title">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@={viewModel.doctor.description}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_title"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/title"
+                        app:helperText="@string/optional"
+                        app:layout_constraintTop_toBottomOf="@id/spl_degree">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@={viewModel.doctor.title}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_cv"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/cv"
+                        android:paddingEnd="42dp"
+                        app:helperText="@string/optional"
+                        app:layout_constraintEnd_toStartOf="@id/iv_upload_cv"
+                        app:layout_constraintTop_toBottomOf="@id/etl_description">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_cv"
+                            style="@style/EditTextNotEditable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{()->clickHandler.onCv()}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_upload_cv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:elevation="@dimen/elevation_default"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        app:srcCompat="@drawable/ic_upload_file_black"
+                        android:background="@drawable/rect_edit_text_corner_gray"
+                        app:layout_constraintTop_toTopOf="@id/etl_cv"
+                        app:layout_constraintBottom_toBottomOf="@id/etl_cv"
+                        app:layout_constraintEnd_toEndOf="@id/etl_cv"
+                        tools:targetApi="lollipop" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etl_insurance"
+                        style="@style/EditTextNormal"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/insurance"
+                        app:layout_constraintTop_toBottomOf="@id/etl_cv">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_insurance"
+                            style="@style/EditTextNotEditable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{()->clickHandler.onInsurance()}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="@string/accept"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_terms"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etl_insurance" />
+
+                    <TextView
+                        android:id="@+id/tv_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:onClick="@{()->clickHandler.onTerms()}"
+                        android:text="@string/terms_and_conditions"
+                        app:layout_constraintBottom_toBottomOf="@+id/cb_terms"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cb_terms"
+                        app:layout_constraintTop_toTopOf="@+id/cb_terms" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_bottom_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="view_group_personal_info,view_group_data"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_sign_up"
+                    style="@style/ButtonNormal"
+                    android:drawableEnd="@drawable/ic_back_white"
+                    android:drawablePadding="@dimen/drawable_padding_8"
+                    android:onClick="@{()->clickHandler.onSignUp()}"
+                    android:text="@string/next"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    android:layout_marginEnd="@dimen/_22sdp"
+                    app:layout_constraintVertical_bias="1"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_bottom_data"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/loading"
+            style="@style/centerView"
+            layout="@layout/loading" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

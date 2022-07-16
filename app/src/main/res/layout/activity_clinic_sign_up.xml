@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickHandler"
+            type="com.doctoraak.doctoraakdoctor.ui.signUpClinic.ClinicSignUpActivity.ClinicSignUpClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.doctoraak.doctoraakdoctor.ui.signUpClinic.ClinicSignUpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/view_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/sign_up_scene"
+        android:background="@color/main_background">
+
+        <ImageView
+            android:id="@+id/iv_image_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_expanded_header"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_toolbar_full"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:contentDescription="@string/back"
+            android:onClick="@{()->clickHandler.onBack()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/welcome"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_expanded_header"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_sub_title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_sub_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/create_clinic"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_text" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dimens_profile_expaneded"
+            android:layout_height="@dimen/dimens_profile_expaneded"
+            android:onClick="@{()->clickHandler.onProfileImage()}"
+            android:src="@drawable/ic_clinic"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image_back"/>
+
+        <ImageView
+            android:id="@+id/iv_profile_icon"
+            android:layout_width="@dimen/dimens_profile_icon_expanded"
+            android:layout_height="@dimen/dimens_profile_icon_expanded"
+            android:padding="4dp"
+            android:tint="@color/white"
+            android:background="@drawable/notification_count_background"
+            app:srcCompat="@drawable/ic_menu_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_bottom_image_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="iv_image_back,iv_profile"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/barrier_bottom_image_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:context=".ui.signUpClinic.ClinicSignUpActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/tv_photo"
+                    style="@style/ViewRectNormal"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:gravity="center_vertical"
+                    android:onClick="@{()->clickHandler.onProfileImage()}"
+                    android:text="@string/upload_photo"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/gray_3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/rect_edit_text_corner_gray"
+                    android:elevation="@dimen/elevation_default"
+                    android:contentDescription="@string/upload_photo"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_photo"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_photo"
+                    app:layout_constraintTop_toTopOf="@+id/tv_photo"
+                    app:srcCompat="@drawable/ic_upload_file_black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_phone"
+                    style="@style/EditTextNormal"
+                    android:hint="@string/phone_number"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_photo" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_phone"
+                        android:text="@={viewModel.clinic.phone}"
+                        android:inputType="phone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_address"
+                    style="@style/EditTextNormal"
+                    android:hint="@string/address"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_address"
+                        style="@style/EditTextNotEditable"
+                        android:onClick="@{()->clickHandler.onAddressPicker()}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.tiper.MaterialSpinner
+                    android:id="@+id/spl_city"
+                    style="@style/SpinnerNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/city"
+                    app:spinnerMode="bottomsheet"
+                    app:layout_constraintTop_toBottomOf="@id/etl_address"/>
+
+                <com.tiper.MaterialSpinner
+                    android:id="@+id/spl_area"
+                    style="@style/SpinnerNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/area"
+                    app:spinnerMode="bottomsheet"
+                    app:layout_constraintTop_toBottomOf="@id/spl_city"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_notes"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                     android:hint="@string/notes"
+                    app:layout_constraintTop_toBottomOf="@+id/spl_area" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_notes"
+                        android:text="@{viewModel.clinic.notes}"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:cursorVisible="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/etl_fees2"-->
+<!--                    style="@style/EditTextNormal"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:hint="@string/consultation_fees"-->
+<!--                    app:helperText="@string/egp"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/etl_fees" >-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/et_fees2"-->
+<!--                        android:inputType="number" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_working_hours"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/working_hours"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_notes" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_working_hours"
+                        style="@style/EditTextNotEditable"
+                        android:onClick="@{()->clickHandler.onWorkingHours()}"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_waiting_time"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/waiting_time"
+                    app:helperText="@string/time_in_minute"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_working_hours" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_waiting_time"
+                        android:text="@={viewModel.clinic.waitingTime}"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_create_clinic"
+                    style="@style/ButtonNormal"
+                    android:text="@string/create"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    android:layout_marginEnd="@dimen/_22sdp"
+                    app:layout_constraintVertical_bias="1"
+                    android:onClick="@{()->clickHandler.onCreateClinic()}"
+                    app:layout_constraintTop_toBottomOf="@id/etl_waiting_time"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/loading"
+            style="@style/centerView"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

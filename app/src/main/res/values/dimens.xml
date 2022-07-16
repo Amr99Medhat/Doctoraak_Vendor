@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_it_card">@dimen/_120sdp</dimen>
+    <dimen name="radius_rect_border_normal_text">@dimen/_6sdp</dimen>
+    <dimen name="margin_top_hello_sign_up">@dimen/_80sdp</dimen>
+    <dimen name="corner_payment">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="drawable_padding">12dp</dimen>
+    <dimen name="rect_corner_back">@dimen/_50sdp</dimen>
+    <dimen name="drawable_padding_8">8dp</dimen>
+    <dimen name="padding_end_start_button">32dp</dimen>
+    <dimen name="padding_end_start_button_icon">20dp</dimen>
+    <dimen name="corner_dialog_sweet">22dp</dimen>
+    <dimen name="dimens_loading">@dimen/_120sdp</dimen>
+    <dimen name="corner_cardview_image_text">18dp</dimen>
+    <dimen name="corner_main_buton">8dp</dimen>
+    <dimen name="radius_edit_text">16dp</dimen>
+    <dimen name="height_expanded_header">@dimen/_220sdp</dimen>
+    <dimen name="height_collpased_header">@dimen/_100sdp</dimen>
+    <dimen name="text_size_expanded_header">@dimen/_12ssp</dimen>
+    <dimen name="text_size_collpased_header">@dimen/_8ssp</dimen>
+    <dimen name="text_size_expanded_header_2">@dimen/_8ssp</dimen>
+    <dimen name="text_size_collpased_header_2">@dimen/_6ssp</dimen>
+    <dimen name="dimens_profile_expaneded">@dimen/_100sdp</dimen>
+    <dimen name="dimens_profile_collapsed">@dimen/_40sdp</dimen>
+    <dimen name="dimens_profile_icon_expanded">@dimen/_26sdp</dimen>
+    <dimen name="dimens_profile_icon_collapsed">@dimen/_16sdp</dimen>
+    <dimen name="elevation_default">2dp</dimen>
+    <dimen name="corner_order_item">8dp</dimen>
+
+</resources>

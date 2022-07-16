@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WaveAppBarLayout">
+        <attr name="StartHeightOfFirstWave" format="dimension"/>
+        <attr name="EndHeightOfFirstWave" format="dimension"/>
+        <attr name="StartHeightOfSecondWave" format="dimension"/>
+        <attr name="EndHeightOfSecondWave" format="dimension"/>
+
+        <attr name="FirstCurveHeightOfFirstWave" format="dimension"/>
+        <attr name="FirstCurveHeightOfSecondWave" format="dimension"/>
+        <attr name="SecondCurveHeightOfFirstWave" format="dimension"/>
+        <attr name="SecondCurveHeightOfSecondWave" format="dimension"/>
+        <attr name="firstWave_background" format="reference"/>
+        <attr name="secondWave_background" format="reference"/>
+        <attr name="wave_elevation" format="dimension"/>
+        <attr name="FirstCurvePercentageWidthOfFirstWave" format="float"/>
+        <attr name="FirstCurvePercentageWidthOfSecondWave" format="float"/>
+        <attr name="SecondCurvePercentageWidthOfFirstWave" format="float"/>
+        <attr name="SecondCurvePercentageWidthOfSecondWave" format="float"/>
+
+        <attr name="showFirstWave" format="boolean"/>
+        <attr name="showSecondWave" format="boolean"/>
+        <attr name="autoBottomPadding" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ITCardView">
+        <attr name="card_background" format="reference"/>
+        <attr name="image_width" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="image_height" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="image_background" format="reference"/>
+        <attr name="image_scaleType" format="enum">
+            <enum name="matrix" value="0" />
+            <enum name="fitXY" value="1" />
+            <enum name="fitStart" value="2" />
+            <enum name="fitCenter" value="3" />
+            <enum name="fitEnd" value="4" />
+            <enum name="center" value="5" />
+            <enum name="centerCrop" value="6" />
+            <enum name="centerInside" value="7" />
+        </attr>
+        <attr name="text_text_normal" format="string"/>
+        <attr name="text_text_bold" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+        <attr name="show_divider" format="boolean"/>
+    </declare-styleable>
+
+</resources>

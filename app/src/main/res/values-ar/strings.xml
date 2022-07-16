@@ -1,0 +1,438 @@
+<resources>
+
+    <string name="copyright_"> حقوق الطبع والنشر بواسطة \u00A9 Doctoraak  </string>
+        
+    <string name="doctoraak"> Doctoraak </string>
+        
+    <string name="doctor"> طبيب </string>
+
+    <string name="medical_center">مركز طبي</string>
+        
+    <string name="sign_up"> الاشتراك </string>
+        
+    <string name="log_in"> تسجيل الدخول </string>
+        
+    <string name="sign_in_to_your_account"> سجّل الدخول إلى حسابك </string>
+        
+    <string name="don_t_have_an_account"> أليس لديك حساب؟ </string>
+        
+    <string name="phone_number"> رقم الهاتف </string>
+        
+    <string name="password"> كلمة المرور </string>
+        
+    <string name="confirm_password"> تأكيد كلمة المرور </string>
+        
+    <string name="forget_password"> هل نسيت كلمة المرور؟ </string>
+    <string name="forget_password_"> هل نسيت كلمة المرور </string>
+        
+    <string name="create_account"> إنشاء حساب </string>
+        
+    <string name="full_name"> الاسم الكامل </string>
+        
+    <string name="address"> العنوان </string>
+        
+    <string name="gender"> النوع </string>
+        
+    <string name="verify"> التحقق </string>
+        
+    <string name="accept"> قبول </string>
+        
+    <string name="terms_and_conditions"> <u> البنود والشروط </u> </string>
+        
+    <string name="birthday"> تاريخ الميلاد </string>
+        
+    <string name="mobile_verification"> التحقق من الجوّال </string>
+        
+    <string name="check_your_mobile_for_sms_code"> تحقق من هاتفك المحمول بحثًا عن رمز Sms </string>
+        
+    <string name="confirm"> تأكيد </string>
+        
+    <string name="verification_code"> رمز التحقق </string>
+        
+    <string name="did_not_receive_sms"> لم تتلق SMS؟ </string>
+        
+    <string name="resend"> إعادة الإرسال </string>
+        
+    <string name="welcome"> مرحبًا </string>
+        
+    <string name="pharmacy"> الصيدلة </string>
+        
+    <string name="lab"> معمل </string>
+        
+    <string name="medical_lab"> معمل طبي </string>
+        
+    <string name="incubation"> الحضانة </string>
+        
+    <string name="radiology"> الأشعة </string>
+        
+    <string name="search"> البحث </string>
+        
+    <string name="insurance"> التأمين </string>
+        
+    <string name="select_your_location"> حدد موقعك </string>
+        
+    <string name="email"> البريد الإلكتروني </string>
+        
+    <string name="cv"> السيرة الذاتية </string>
+        
+    <string name="working_hours"> ساعات العمل </string>
+        
+    <string name="fees"> الرسوم </string>
+        
+    <string name="shift_1"> Shift 1 </string>
+        
+    <string name="shift_2"> Shift 2 </string>
+        
+    <string name="delivery"> التسليم </string>
+        
+    <string name="delivery_"> التسليم؟ </string>
+        
+    <string name="name"> الاسم </string>
+        
+    <string name="quantity"> الكمية </string>
+        
+    <string name="pick_location"> اختار الموقع </string>
+        
+    <string name="see_location_on_map"> راجع الموقع على الخريطة </string>
+        
+    <string name="back"> رجوع </string>
+        
+    <string name="rest_password"> استعادة كلمة المرور </string>
+        
+    <string name="i_m_a__"> أنا \n </string>
+
+    <string name="hello"> مرحبًا </string>
+        
+    <string name="create_doctor_account"> إنشاء حساب الطبيب </string>
+    <string name="create_medical_center_account"> إنشاء n\ حساب مركز طبي </string>
+    <string name="create_optical_center_account"> إنشاء n\ حساب مركز بصريات </string>
+    <string name="create_hospital_account"> إنشاء n\ حساب مستشفي </string>
+        
+    <string name="upload_cv"> تحميل السيرة الذاتية </string>
+        
+    <string name="next"> التالي </string>
+        
+    <string name="create_clinic"> إنشاء عيادة </string>
+        
+    <string name="create_pharmacy_account"> إنشاء n\ حساب صيدلية </string>
+        
+    <string name="create_lab_account"> إنشاء حساب n\ معمل </string>
+        
+    <string name="create_radiology_account"> إنشاء n\ حساب الأشعة </string>
+        
+    <string name="create"> إنشاء </string>
+        
+    <string name="upload_photo"> تحميل الصورة </string>
+        
+        
+    <string name="pharmacy_data"> بيانات الصيدلة </string>
+        
+    <string name="lab_data"> بيانات المعمل </string>
+     
+    <string name="center_data"> بيانات المركز </string>
+        
+    <string name="waiting_hours"> ساعات الانتظار </string>
+        
+    <string name="thank_you_for_registration"> شكرًا على التسجيل </string>
+        
+    <string name="do_you_have_another_clinic"> هل لديك عيادة أخرى؟ </string>
+        
+    <string name="yes"> نعم </string>
+        
+    <string name="no"> لا </string>
+        
+    <string name="fawry"> Fawry </string>
+        
+    <string name="vodafone"> Vodafone </string>
+        
+    <string name="reciept_"> الإيصال: </string>
+             
+    <string name="subscribe_now"> اشترك الآن! </string>
+        
+    <string name="enter_code"> أدخل الرمز </string>
+        
+    <string name="done"> تم </string>
+        
+    <string name="save"> حفظ </string>
+        
+    <string name="title_activity_main00"> Main00Activity </string>
+        
+    <string name="navigation_drawer_open"> افتح درج التنقل </string>
+        
+    <string name="navigation_drawer_close"> أغلق درج التنقل </string>
+        
+    <string name="profile"> الملف الشخصي </string>
+        
+    <string name="calendar"> التقويم </string>
+        
+    <string name="add_clinic"> إضافة عيادة </string>
+        
+    <string name="contact_us"> اتصل بنا </string>
+        
+    <string name="language"> اللغة </string>
+        
+    <string name="log_out"> تسجيل الخروج </string>
+        
+    <string name="setting"> الإعداد </string>
+        
+    <string name="available"> متاح </string>
+        
+    <string name="all"> الكل </string>
+        
+    <string name="_new"> جديد </string>
+        
+    <string name="consultation"> استشاره </string>
+        
+    <string name="_continue"> متابعة </string>
+        
+    <string name="cancel"> إلغاء </string>
+        
+    <string name="type"> النوع </string>
+        
+    <string name="reservation_number"> رقم الحجز </string>
+        
+    <string name="reservations"> حجوزات </string>
+        
+    <string name="notes"> Notes </string>
+        
+    <string name="edit"> تحرير </string>
+        
+    <string name="prescription"> وصفة طبية </string>
+        
+    <string name="is_not_valid"> غير صالح </string>
+
+    <!--    error Handling Strings  -->
+    <string name="unexpected_error"> خطأ غير متوقع </string>
+        
+    <string name="bad_request"> طلب سيء </string>
+        
+    <string name="request_not_found"> لم يتم العثور على الطلب </string>
+        
+    <string name="server_error"> خطأ في الخادم </string>
+        
+    <string name="unauthorized_user"> مستخدم غير مصرح به </string>
+        
+    <string name="service_unavailable"> الخدمة غير متاحة مؤقتًا </string>
+        
+    <string name="not_connected_to_network"> غير متصل بالشبكة </string>
+
+    <string name="file_not_found_">لم يتم العثور على الملف</string>
+
+    <string name="network_error">مشكله باللانترنت</string>
+
+    <!--  ..........................  -->
+
+    <string name="empty_field"> حقل فارغ </string>
+        
+    <string name="enter_your_"> أدخل </string>
+        
+    <string name="password_fields_didt_match"> حقول كلمة المرور غير متطابقة </string>
+        
+    <string name="password_must_be_larger_7"> يجب أن تكون كلمة المروراكبر من 5 أرقام </string>
+        
+    <string name="phone_must_be_equal_11"> يجب أن يكون الهاتف = 11 رقمًا </string>
+        
+    <string name="could_not_find_this_image"> تعذر العثور على هذه الصورة </string>
+        
+    <string name="approve_terms_and_conditions"> الموافقة على البنود والشروط </string>
+        
+    <string name="request_permission"> طلب إذن </string>
+        
+    <string name="ok"> موافق </string>
+        
+    <string name="read_external_storage_permission_msg"> هذا الإذن مطلوب لاختيار صورة من المعرض </string>
+        
+    <string name="select_image"> حدد صورة </string>
+        
+    <string name="select_your_insurance_company"> حدد شركات التأمين الخاصة بك </string>
+        
+    <string name="sms_sent_to_phone"> سيتم إرسال الرسائل القصيرة إلى الهاتف </string>
+        
+    <string name="success"> النجاح </string>
+        
+    <string name="male"> ذكر </string>
+        
+    <string name="female"> إناث </string>
+        
+    <string name="degree"> الدرجة العلمية </string>
+        
+    <string name="specialization"> التخصص </string>
+        
+    <string name="sms_code"> رمز الرسائل القصيرة </string>
+        
+    <string name="file_not_found"> ​​لم يتم العثور على الملف </string>
+        
+    <string name="pick_a_file"> اختر ملفًا </string>
+        
+    <string name="pick_your_cv"> اختر سيرتك الذاتية </string>
+        
+    <string name="image_not_found"> ​​لم يتم العثور على الصورة </string>
+        
+    <string name="pick_an_image"> اختر صورة </string>
+        
+    <string name="select_your_specialization"> حدد تخصصك </string>
+        
+    <string name="select_your_degree"> حدد شهادتك </string>
+        
+    <string name="loading_insurance_companies"> تحميل شركات التأمين </string>
+        
+    <string name="city"> المدينة </string>
+        
+    <string name="area"> المنطقه </string>
+        
+    <string name="city_is_required"> المدينة مطلوبة </string>
+        
+    <string name="area_is_required"> المساحة مطلوبة </string>
+        
+    <string name="pick_clinic_address"> اختر عنوان العيادة </string>
+        
+    <string name="pick_address"> اختيار العنوان </string>
+        
+    <string name="value_equal_zero"> القيمة تساوي صفرًا </string>
+        
+    <string name="select_your_working_hours"> حدد ساعات العمل </string>
+        
+    <string name="preview"> المعاينة </string>
+        
+    <string name="location_picker"> أداة اختيار الموقع </string>
+        
+    <string name="select_location"> حدد الموقع </string>
+        
+    <string name="no_location_was_selected"> لم يتم تحديد أي موقع </string>
+        
+    <string name="request_location_permission"> طلب تصريح موقع </string>
+        
+    <string name="this_permission_is_required_for_getting_location"> هذا الإذن مطلوب للحصول على الموقع الحالي </string>
+        
+    <string name="location_is_set"> الموقع هو تعيين </string>
+        
+    <string name="io_exception_cant_get_location"> لا يمكن الحصول على عنوان إعادة تحديد الموقع والمحاولة مرة أخرى </string>
+        
+    <string name="no_internet_connection"> لا يوجد اتصال إنترنت </string>
+
+        
+    <string name="saturday"> السبت </string>
+        
+    <string name="sunday"> الأحد </string>
+        
+    <string name="monday"> الاثنين </string>
+        
+    <string name="tuesday"> الثلاثاء </string>
+        
+    <string name="wednesday"> الأربعاء </string>
+        
+    <string name="thursday"> الخميس </string>
+        
+    <string name="friday"> الجمعة </string>
+        
+    <string name="active_this_day_first"> نشط هذا اليوم أولاً </string>
+        
+    <string name="loading"> التحميل </string>
+        
+    <string name="warning"> تحذير </string>
+        
+    <string name="error"> خطأ </string>
+        
+    <string name="dr_"> Dr. </string>
+        
+    <string name="open_drawer"> فتح الدرج </string>
+        
+    <string name="close_drawer"> إغلاق الدرج </string>
+        
+    <string name="are_you_sure_you_want_to_cancel_this_order_"> هل أنت متأكد من رغبتك في إلغاء هذا الطلب ؟ </string>
+
+    <string name="are_you_sure_you_want_to_accept_this_order_">هل أنت متأكد أنك تريد قبول هذا الطلب ؟</string>
+        
+    <string name="accept_order_only_if_you_have_all_its_medicines"> اقبل الطلب فقط إذا كان لديك كل منتجاته </string>
+        
+    <string name="analysis"> التحليل </string>
+        
+    <string name="clinic"> عيادة </string>
+        
+    <string name="are_you_sure_you_want_to_update_profile_"> هل أنت متأكد من رغبتك في تحديث ملف الشخصي ؟ </string>
+
+    <string name="are_you_sure_you_want_to_update_clinic_">هل أنت متأكد من رغبتك في تحديث العيادة ؟</string>
+
+    <string name="are_you_sure_you_want_to_log_out"> هل أنت متأكد من رغبتك في تسجيل الخروج؟</string>
+
+    <string name="no_available_days"> لا أيام متوفرة </string>
+        
+    <string name="notification"> الاشعارات </string>
+        
+    <string name="start_time_is_required_or_deactivate_day"> وقت البدء مطلوب أو إلغاء تنشيط اليوم </string>
+        
+    <string name="end_time_is_required_or_deactivate_day"> وقت الانتهاء مطلوب أو إلغاء تنشيط اليوم </string>
+
+    <string name="consultation_fees">رسوم الاستشاره</string>
+
+    <string name="sms_code_is_resent">تم إعادة إرسال رمز Sms</string>
+
+    <string name="you_have_no_clinics">ليس لديك عيادات حاليا</string>
+
+    <string name="your_account_not_active__send_fees_on_specified_number_to_active_account">حسابك غير نشط ، أرسل الرسوم على الرقم المحدد لتفعيل الحساب</string>
+
+    <string name="no_location_provider_available">لا يوجد خدمه متاحة لايجاد الموقع</string>
+
+    <string name="gps_is_not_enabled">!GPS غير مفعل</string>
+
+    <string name="do_you_want_to_turn_on_gps_">هل تريد تشغيل GPS؟</string>
+
+    <string name="select">اختار</string>
+
+    <string name="text_copied">تم النسخ</string>
+
+    <string name="long_press_to_select_location_on_map">ضغطة طويلة لتحديد الموقع على الخريطة</string>
+
+    <string name="couldnt_get_current_location">لا يمكن الحصول على الموقع الحالي</string>
+    <string name="time_in_minute">الوقت بالدقيقة</string>
+    <string name="egp">بالجنيه</string>
+    <string name="availability">توفر</string>
+    <string name="clinic_availability_is_changed_successfully">تم تغيير توافر العيادة بنجاح</string>
+    <string name="your_hour_has_changed_successfully">لقد تغيرت ساعة العمل الخاصة بك بنجاح</string>
+    <string name="are_you_sure_you_want_to_change_your_working_hours__">هل أنت متأكد أنك تريد تغيير ساعة العمل الخاصة بك ؟</string>
+    <string name="this_clinic_will_be_unavailable_until_tomorrow">ستكون هذه العيادة غير متاحة حتى الغد</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="sms_sent">تم ارسال Sms</string>
+    <string name="cancel_reservation_of_today">إلغاء حجوزات اليوم</string>
+    <string name="download">تنزيل</string>
+    <string name="update">تحديث</string>
+    <string name="clinic_info">معلومات العيادة</string>
+    <string name="description">الوصف</string>
+    <string name="optional">اختياري</string>
+    <string name="refuse">رفض</string>
+    <string name="refuse_order">رفض طلب</string>
+    <string name="mention_reason">اذكر سبب .......</string>
+    <string name="reason">السبب .........</string>
+    <string name="no_available_areas_for_that_city">لا توجد مناطق متاحة لتلك المدينة</string>
+    <string name="undo">الغاء</string>
+    <string name="notification_removed">تمت إزالة الإشعار</string>
+    <string name="notification_removed_successfully">تمت إزالة الإشعار بنجاح</string>
+    <string name="no_content">لا يوجد محتوى</string>
+    <string name="information">المعلومات</string>
+    <string name="you_can_use_the_app_for_free_for_3_months">يمكنك إستخدام التطبيق مجانا لمدة ثلاث اشهر</string>
+    <string name="please_enter_the_verification_code_nwe_send_to_your_mobile">يرجى إدخال رمز التحقق\nالذي أرسلناه إلى هاتفك المحمول</string>
+    <string name="payment">الدفع</string>
+    <string name="select_the_payment_method">اختر طريقة الدفع</string>
+    <string name="determine_working_times">تحديد أوقات العمل</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="patient_data">بيانات المرضى</string>
+    <string name="medicines">الأدوية</string>
+    <string name="skip">تخطى</string>
+    <string name="phone_number_2">رقم الهاتف 2</string>
+    <string name="title">لقب</string>
+    <string name="visa_card">Visa Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="pick_month">اختر شهر</string>
+    <string name="pick_year">اختر عام</string>
+    <string name="waiting_time">وقت الانتظار</string>
+    <string name="hospital">مستشفي</string>
+    <string name="optical_center">مركز بصريات</string>
+    <string name="for_me">من اجلي</string>
+    <string name="for_other">للآخرين</string>
+    <string name="filter_by_date">فلترة حسب التاريخ</string>
+    <string name="no_address_specified">العنوان غير محدد</string>
+
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7346FC</color>
+    <color name="colorPrimaryDark">#AC7FFA</color>
+    <color name="colorAccent">#39B6E2</color>
+    <color name="colorDivider">#B9B9B9</color>
+    <color name="colorLauncherBackground">#6F58FE</color>
+    <color name="colorBackground">#fafafa</color>
+
+    /////////////   /////////////////   /////////////
+    <color name="transparent">#00FFFFFF</color>
+    <color name="gray_0_0">#F0F0F0</color>
+    <color name="gray_1_1">#ECECEC</color>
+    <color name="gray_0">#60C9C9C9</color>
+    <color name="gray_0_1">#B4B4B4</color>
+    <color name="gray_1">#A5A5A5</color>
+    <color name="gray_2">#707070</color>
+    <color name="gray_3">#525252</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple_transparent">#41767381</color>
+    <color name="black">#000000</color>
+    <color name="ColorMainAccent">#812AFF</color>
+    <color name="ColorMainAccent_0">#9448FF</color>
+    <color name="blue_1">#6CB8FE</color>
+    <color name="blue_0">#8CC6FC</color>
+    <color name="blue">#1CA3C6</color>
+    <color name="purple">#9C5EFC</color>
+    <color name="green">#11E013</color>
+    <color name="red">#F00A0A</color>
+    <color name="light_red">#ffb8b8</color>
+    <color name="main_background">#fafafa</color>
+    <color name="sms_counter_play">#00E1AB</color>
+    <color name="sms_counter_stop">#1CA3C6</color>
+    <color name="accentTransparent">#4D6336FC</color>
+    <color name="green_1">#0EB810</color>
+
+</resources>

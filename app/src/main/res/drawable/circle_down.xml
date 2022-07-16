@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/rect_edit_text_corner_gray"/>
+
+    <item android:drawable="@drawable/ic_down"/>
+
+</layer-list>

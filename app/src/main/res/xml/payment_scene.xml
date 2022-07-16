@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:motion="http://schemas.android.com/tools">
+
+    <Transition
+            app:constraintSetEnd="@id/end1"
+            app:constraintSetStart="@id/start1"
+            app:duration="300">
+
+    </Transition>
+
+    <Transition
+            app:constraintSetEnd="@id/start1"
+            app:constraintSetStart="@id/end1"
+            app:duration="300">
+
+    </Transition>
+
+    <Transition
+            app:constraintSetEnd="@id/end2"
+            app:constraintSetStart="@id/start2"
+            app:duration="300">
+
+    </Transition>
+
+    <Transition
+            app:constraintSetEnd="@id/start2"
+            app:constraintSetStart="@id/end2"
+            app:duration="300">
+
+    </Transition>
+
+    <Transition
+            app:constraintSetEnd="@id/end3"
+            app:constraintSetStart="@id/start3"
+            app:duration="300">
+
+    </Transition>
+
+    <Transition
+            app:constraintSetEnd="@id/start3"
+            app:constraintSetStart="@id/end3"
+            app:duration="300">
+
+    </Transition>
+    
+
+    <ConstraintSet android:id="@+id/end1">
+
+        <Constraint
+                android:id="@id/radiobutton_order_view"
+                app:layout_constraintEnd_toEndOf="@id/tv_request_medicine"
+                app:layout_constraintStart_toStartOf="@id/tv_request_medicine"
+                app:layout_constraintTop_toTopOf="@id/tv_request_medicine"
+                app:layout_constraintBottom_toBottomOf="@id/tv_request_medicine">
+
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_request_medicine">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_prescription">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_all">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start1">
+        <Constraint
+                android:id="@id/radiobutton_order_view"
+                app:layout_constraintEnd_toEndOf="@id/tv_prescription"
+                app:layout_constraintStart_toStartOf="@id/tv_prescription"
+                app:layout_constraintTop_toTopOf="@id/tv_prescription"
+                app:layout_constraintBottom_toBottomOf="@id/tv_prescription"
+                >
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_request_medicine">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_prescription">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_all">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end2">
+
+        <Constraint
+                android:id="@id/radiobutton_order_view"
+                app:layout_constraintEnd_toEndOf="@id/tv_all"
+                app:layout_constraintStart_toStartOf="@id/tv_all"
+                app:layout_constraintTop_toTopOf="@id/tv_all"
+                app:layout_constraintBottom_toBottomOf="@id/tv_all">
+
+
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_request_medicine">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_prescription">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_all">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/white" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start2">
+        <Constraint
+                android:id="@id/radiobutton_order_view"
+                app:layout_constraintEnd_toEndOf="@id/tv_request_medicine"
+                app:layout_constraintStart_toStartOf="@id/tv_request_medicine"
+                app:layout_constraintTop_toTopOf="@id/tv_request_medicine"
+                app:layout_constraintBottom_toBottomOf="@id/tv_request_medicine"
+                >
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_request_medicine">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_prescription">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_all">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end3">
+
+        <Constraint
+                android:id="@id/radiobutton_order_view"
+                app:layout_constraintEnd_toEndOf="@id/tv_prescription"
+                app:layout_constraintStart_toStartOf="@id/tv_prescription"
+                app:layout_constraintTop_toTopOf="@id/tv_prescription"
+                app:layout_constraintBottom_toBottomOf="@id/tv_prescription">
+
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_request_medicine">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_prescription">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_all">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/start3">
+        <Constraint
+                android:id="@id/radiobutton_order_view"
+                app:layout_constraintEnd_toEndOf="@id/tv_all"
+                app:layout_constraintStart_toStartOf="@id/tv_all"
+                app:layout_constraintTop_toTopOf="@id/tv_all"
+                app:layout_constraintBottom_toBottomOf="@id/tv_all"
+                >
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_request_medicine">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_prescription">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/tv_all">
+
+            <CustomAttribute
+                    app:attributeName="textColor"
+                    app:customColorValue="@color/white" />
+        </Constraint>
+
+    </ConstraintSet>
+    
+
+</MotionScene>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:autoMirrored="true">
+
+    <item >
+        <shape android:shape="rectangle">
+
+            <corners
+                android:bottomRightRadius="@dimen/corner_cardview_image_text"
+                android:topRightRadius="@dimen/corner_cardview_image_text" />
+
+            <gradient
+                android:startColor="#B184FF"
+                android:endColor="#6336FC" />
+
+        </shape>
+    </item>
+
+</layer-list>

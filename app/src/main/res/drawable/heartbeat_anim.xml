@@ -1,0 +1,35 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="125dp"
+            android:height="125dp"
+            android:viewportWidth="125"
+            android:viewportHeight="125">
+            <path
+                android:name="path_3"
+                android:pathData="M 0 66.25 L 21.911 66.25 L 32.066 85.625 L 40.599 63.125 L 55.929 96.25 L 61.221 31.25 L 75.771 66.25 L 124.375 66.25"
+                android:strokeColor="#fff"
+                android:strokeWidth="4"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="path_3">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:repeatMode="restart"
+                    android:repeatCount="infinite"
+                android:propertyName="trimPathStart"
+                android:duration="1000"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType"
+                android:interpolator="@android:anim/accelerate_interpolator"/>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

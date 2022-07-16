@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/scrollView"
+            app:touchAnchorSide="top"/>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start" >
+
+        <Constraint android:id="@+id/iv_image_back"
+            android:layout_height="@dimen/height_expanded_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dimens_profile_expaneded"
+            android:layout_height="@dimen/dimens_profile_expaneded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image_back"/>
+
+        <Constraint
+            android:id="@+id/iv_profile_icon"
+            android:layout_width="@dimen/dimens_profile_icon_expanded"
+            android:layout_height="@dimen/dimens_profile_icon_expanded"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile" />
+
+        <Constraint
+            android:id="@+id/tv_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tool_bar_profile"
+            app:layout_constraintBottom_toTopOf="@id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute app:attributeName="textSize"
+                app:customDimension="@dimen/text_size_expanded_header"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/loading">
+            <PropertySet app:visibilityMode="ignore"
+                app:applyMotionScene="false"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/iv_image_back"
+            android:layout_height="@dimen/height_collpased_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dimens_profile_collapsed"
+            android:layout_height="@dimen/dimens_profile_collapsed"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image_back"/>
+
+        <Constraint
+            android:id="@+id/iv_profile_icon"
+            android:layout_width="@dimen/dimens_profile_icon_collapsed"
+            android:layout_height="@dimen/dimens_profile_icon_collapsed"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile" />
+
+        <Constraint
+            android:id="@+id/tv_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tool_bar_profile"
+            app:layout_constraintBottom_toTopOf="@id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute app:attributeName="textSize"
+                app:customDimension="@dimen/text_size_collpased_header"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/loading">
+            <PropertySet app:visibilityMode="ignore"
+                app:applyMotionScene="false"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

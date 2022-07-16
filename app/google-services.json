@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "841299032939",
+    "firebase_url": "https://doctorak-a1e6b.firebaseio.com",
+    "project_id": "doctorak-a1e6b",
+    "storage_bucket": "doctorak-a1e6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841299032939:android:fd5c7c2ff77a7a71832a2e",
+        "android_client_info": {
+          "package_name": "com.doctoraak.doctoraakdoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841299032939-gamrtleauk18i96ei5iug3en6tn3vkb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3T0DNiSWqfjIjsaYrkASU7fwk5mp3_d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841299032939-gamrtleauk18i96ei5iug3en6tn3vkb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841299032939:android:925f4b1285b13b22832a2e",
+        "android_client_info": {
+          "package_name": "com.doctoraak.doctoraakpatient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841299032939-gamrtleauk18i96ei5iug3en6tn3vkb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3T0DNiSWqfjIjsaYrkASU7fwk5mp3_d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841299032939-gamrtleauk18i96ei5iug3en6tn3vkb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

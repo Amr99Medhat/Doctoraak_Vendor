@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.doctoraak.doctoraakdoctor.customView.WaveAppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:autoBottomPadding="false"
+        app:EndHeightOfFirstWave="@dimen/_80sdp"
+        app:EndHeightOfSecondWave="@dimen/_80sdp"
+        app:StartHeightOfSecondWave="@dimen/_40sdp"
+        app:StartHeightOfFirstWave="0dp"
+        app:elevation="0dp"
+        app:wave_elevation="8dp"
+        app:FirstCurveHeightOfFirstWave="@dimen/_80sdp"
+        app:FirstCurveHeightOfSecondWave="@dimen/_90sdp"
+        app:FirstCurvePercentageWidthOfFirstWave="0.6"
+        app:FirstCurvePercentageWidthOfSecondWave="0.6"
+        app:SecondCurveHeightOfFirstWave="@dimen/_10sdp"
+        app:SecondCurveHeightOfSecondWave="@dimen/_10sdp"
+        app:SecondCurvePercentageWidthOfFirstWave="0.2"
+        app:SecondCurvePercentageWidthOfSecondWave="0.3"
+        app:firstWave_background="@drawable/toolbar_background"
+        app:secondWave_background="@drawable/toolbar_background">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/doctoraak"
+                android:src="@drawable/ic_logo_icon" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:text="@string/doctoraak"
+                android:textSize="@dimen/_14ssp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/iv_insurance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/doctoraak"
+                tools:srcCompat="@drawable/ic_doctor" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.doctoraak.doctoraakdoctor.customView.WaveAppBarLayout>
+</layout>

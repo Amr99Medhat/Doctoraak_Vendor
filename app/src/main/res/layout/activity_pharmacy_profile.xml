@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.doctoraak.doctoraakdoctor.ui.profilePharmacy.PharmacyProfileActivity.PharmacyProfileClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.doctoraak.doctoraakdoctor.ui.profilePharmacy.PharmacyProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/profile_scene">
+
+        <ImageView
+            android:id="@+id/iv_image_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_expanded_header"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_toolbar_full"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_expanded_header"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tool_bar_profile" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            imageError="@{@drawable/ic_profile_def}"
+            imagePlaceHolder="@{@drawable/ic_profile_def}"
+            imageUrl="@{viewModel.pharmacy.photo}"
+            android:onClick="@{()->clickHandler.onProfileImage()}"
+            android:layout_width="@dimen/dimens_profile_expaneded"
+            android:layout_height="@dimen/dimens_profile_expaneded"
+            android:src="@drawable/ic_profile_def"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_back" />
+
+        <ImageView
+            android:id="@+id/iv_profile_icon"
+            android:layout_width="@dimen/dimens_profile_icon_expanded"
+            android:layout_height="@dimen/dimens_profile_icon_expanded"
+            android:background="@drawable/notification_count_background"
+            android:padding="4dp"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_bottom_image_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="iv_image_back,iv_profile" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_bottom_image_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_name"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:hint="@string/name"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="@={viewModel.pharmacy.name}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_phone"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/phone_number"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:inputType="phone"
+                        android:text="@={viewModel.pharmacy.phone}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_email"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/email"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:inputType="textEmailAddress"
+                        android:text="@={viewModel.pharmacy.email}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_address"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/address"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        style="@style/EditTextNotEditable"
+                        lang="@{viewModel.pharmacy.lang}"
+                        latt="@{viewModel.pharmacy.latt}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->clickHandler.onAddressClick()}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.tiper.MaterialSpinner
+                    android:id="@+id/spl_city"
+                    style="@style/SpinnerNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/city"
+                    app:spinnerMode="bottomsheet"
+                    app:layout_constraintTop_toBottomOf="@id/etl_address"/>
+
+                <com.tiper.MaterialSpinner
+                    android:id="@+id/spl_area"
+                    style="@style/SpinnerNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/area"
+                    app:spinnerMode="bottomsheet"
+                    app:layout_constraintTop_toBottomOf="@id/spl_city"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_insurance"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/insurance"
+                    app:layout_constraintBottom_toTopOf="@id/etl_working_hours"
+                    app:layout_constraintTop_toBottomOf="@+id/spl_area">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_insurance"
+                        style="@style/EditTextNotEditable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->clickHandler.onInsurance()}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_working_hours"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/working_hours"
+                    app:layout_constraintBottom_toTopOf="@id/tv_delivery"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_insurance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_working_hours"
+                        style="@style/EditTextNotEditable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->clickHandler.onWorkingHours()}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/tv_delivery"
+                    style="@style/ViewRectNormal"
+                    android:layout_marginTop="12dp"
+                    android:inputType="number"
+                    android:text="@string/delivery_"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_working_hours" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    style="@style/ButtonNormal"
+                    android:onClick="@{()->clickHandler.onUpdateProfile()}"
+                    android:text="@string/save"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    android:layout_marginEnd="@dimen/_22sdp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_delivery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <include
+            android:id="@+id/tool_bar_profile"
+            layout="@layout/tool_bar" />
+
+
+        <include
+            android:id="@+id/loading"
+            style="@style/centerView"
+            layout="@layout/loading" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

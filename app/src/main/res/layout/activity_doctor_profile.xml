@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickHandler"
+            type="com.doctoraak.doctoraakdoctor.ui.profileDoctor.DoctorProfileActivity.DoctorProfileClickHandler" />
+
+        <variable
+            name="viewModel"
+            type="com.doctoraak.doctoraakdoctor.ui.profileDoctor.DoctorProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/profile_scene">
+
+        <ImageView
+            android:id="@+id/iv_image_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_expanded_header"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_toolbar_full"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_expanded_header"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tool_bar_profile"
+            app:layout_constraintBottom_toTopOf="@id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dimens_profile_expaneded"
+            android:layout_height="@dimen/dimens_profile_expaneded"
+            imageError="@{@drawable/ic_profile_def}"
+            imagePlaceHolder="@{@drawable/ic_profile_def}"
+            imageUrl="@{viewModel.doctor.photo}"
+            android:src="@drawable/ic_profile_def"
+            android:onClick="@{()->clickHandler.onProfileImage()}"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_image_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_back" />
+
+        <ImageView
+            android:id="@+id/iv_profile_icon"
+            android:layout_width="@dimen/dimens_profile_icon_expanded"
+            android:layout_height="@dimen/dimens_profile_icon_expanded"
+            android:background="@drawable/notification_count_background"
+            android:padding="4dp"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_bottom_image_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="iv_image_back,iv_profile" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_bottom_image_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_name"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:hint="@string/full_name"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="@={viewModel.doctor.name}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_phone"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/phone_number"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:inputType="phone"
+                        android:text="@={viewModel.doctor.phone}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_phone2"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/phone_number_2"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:text="@={viewModel.doctor.phone2}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_email"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/email"
+                    app:layout_constraintTop_toBottomOf="@+id/etl_phone2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:inputType="textEmailAddress"
+                        android:text="@={viewModel.doctor.email}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_gender_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:drawableStart="@drawable/ic_gender"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/gender"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/gray_3"
+                    app:layout_constraintEnd_toStartOf="@id/tv_gender"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="@+id/etl_email"
+                    app:layout_constraintTop_toBottomOf="@id/etl_email" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewModel.doctor.gender}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/gray_3"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_gender_text"
+                    app:layout_constraintEnd_toEndOf="@+id/etl_email"
+                    app:layout_constraintStart_toEndOf="@+id/tv_gender_text"
+                    app:layout_constraintTop_toTopOf="@+id/tv_gender_text"
+                    tools:text="Male" />
+
+                <com.tiper.MaterialSpinner
+                    android:id="@+id/spl_degree"
+                    style="@style/SpinnerNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/degree"
+                    app:layout_constraintTop_toBottomOf="@id/tv_gender_text"
+                    app:spinnerMode="dropdown" />
+
+                <com.tiper.MaterialSpinner
+                    android:id="@+id/spl_specialization"
+                    style="@style/SpinnerNormal"
+                    android:layout_marginTop="12dp"
+                    android:enabled="true"
+                    android:hint="@string/specialization"
+                    app:layout_constraintTop_toBottomOf="@id/spl_degree"
+                    app:spinnerMode="dropdown" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_title"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/title"
+                    app:layout_constraintTop_toBottomOf="@id/spl_specialization">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="@={viewModel.doctor.title}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_cv"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/cv"
+                    app:layout_constraintTop_toBottomOf="@id/etl_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_cv"
+                        style="@style/EditTextNotEditable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->clickHandler.onCv()}"
+                        android:text="@={viewModel.doctor.title}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etl_insurance"
+                    style="@style/EditTextNormal"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/insurance"
+                    app:layout_constraintTop_toBottomOf="@id/etl_cv">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_insurance"
+                        style="@style/EditTextNotEditable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->clickHandler.onInsurance()}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_save"
+                    style="@style/ButtonNormal"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    android:layout_marginEnd="@dimen/_22sdp"
+                    android:onClick="@{()->clickHandler.onUpdateProfile()}"
+                    android:text="@string/save"
+                    app:layout_constraintTop_toBottomOf="@id/etl_insurance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <include
+            android:id="@+id/tool_bar_profile"
+            layout="@layout/tool_bar" />
+
+        <include
+            android:id="@+id/loading"
+            style="@style/centerView"
+            layout="@layout/loading"
+            app:layout_constraintVertical_bias="0.6"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

@@ -1,0 +1,186 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/textStyle</item>
+        <item name="android:editTextStyle">@style/textStyle</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+<!--        <item name="android:windowContentTransitions">true</item>-->
+    </style>
+
+    <style name="drawerStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="DividerView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.8dp</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+
+    <style name="loadingStyle">
+        <item name="android:layout_width">@dimen/_120sdp</item>
+        <item name="android:layout_height">@dimen/_120sdp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="EditTextNormal" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:layout_marginStart">@dimen/_22sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_22sdp</item>
+        <item name="android:textDirection">locale</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_edit_text</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_edit_text</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_edit_text</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_edit_text</item>
+        <item name="android:background">@drawable/shadow_background</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_default</item>
+    </style>
+
+    <style name="SpinnerNormal" parent="EditTextNormal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:layout_marginStart">@dimen/_22sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_22sdp</item>
+        <item name="android:textDirection">locale</item>
+        <item name="endIconMode">custom</item>
+        <item name="endIconTint">@null</item>
+        <item name="endIconDrawable">@drawable/circle_down</item>
+    </style>
+
+    <style name="AutoCompleteSpinnerNormal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:focusable">false</item>
+        <item name="android:inputType">none</item>
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+    <style name="ViewRectNormal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_22sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_22sdp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:background">@drawable/shadow_background</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation_default</item>
+    </style>
+
+    <!--  todo changed  -->
+    <style name="ButtonNormal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/main_button</item>
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ITCardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="image_width">@dimen/_50sdp</item>
+        <item name="image_height">@dimen/_50sdp</item>
+        <item name="cardElevation">12dp</item>
+        <item name="cardCornerRadius">@dimen/corner_cardview_image_text</item>
+    </style>
+
+    <style name="ProfileTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">@dimen/_18sdp</item>
+    </style>
+
+    <style name="ProfileEditImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rect_corner_blue</item>
+        <item name="srcCompat">@drawable/ic_edit</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:contentDescription">@string/edit</item>
+    </style>
+
+    <style name="ProfileDividerView" parent="DividerView">
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginEnd">@dimen/_64sdp</item>
+        <item name="android:layout_marginStart">@dimen/_64sdp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="TabTextWorkingHour" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/gray_2</item>
+    </style>
+
+    <style name="FullScreenDialogTheme" parent="Theme.AppCompat.Light.DialogWhenLarge">
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="EditTextNotEditable">
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:inputType">none</item>
+    </style>
+
+    <style name="dialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <style name="centerView">
+        <item name="android:layout_width">@dimen/dimens_loading</item>
+        <item name="android:layout_height">@dimen/dimens_loading</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="MainButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundColor">@drawable/main_button</item>
+        <item name="cornerRadius">@dimen/corner_main_buton</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="paddingStart">12dp</item>
+        <item name="paddingEnd">12dp</item>
+    </style>
+
+    <style name="choiceChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/chip_back</item>
+        <item name="android:textColor">@drawable/chip_text</item>
+
+    </style>
+
+</resources>
